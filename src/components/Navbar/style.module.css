@@ -1,0 +1,25 @@
+.component {
+  display: flex;
+  justify-content: stretch;
+  padding: 0 16px;
+}
+
+.component > .blankSpace {
+  flex: 1;
+}
+
+.siteName {
+  padding: 16px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.component button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.component button:hover {
+  background-color: lightgray;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "iplace-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@initia/initia-registry-types": "^0.0.17",
+    "@initia/react-wallet-widget": "^0.127.0",
+    "@initia/utils": "^0.71.0",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-color-palette": "^7.1.1",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-zoom-pan-pinch": "^3.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
+  }
+}
