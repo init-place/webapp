@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static",
+    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
+    "build-cf-types": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
-    "@initia/initia-registry-types": "^0.0.17",
     "@initia/react-wallet-widget": "^0.127.0",
     "@initia/utils": "^0.71.0",
     "next": "14.2.4",
@@ -20,11 +23,16 @@
     "react-zoom-pan-pinch": "^3.4.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.12.0",
+    "@cloudflare/workers-types": "^4.20240620.0",
+    "@initia/initia-registry-types": "^0.0.17",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^34.2.8",
+    "wrangler": "^3.63.0"
   }
 }
