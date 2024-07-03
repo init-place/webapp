@@ -54,7 +54,7 @@ async function signTx(wallet: InitiaWallet, signerAddress: string, chainId: stri
 export function useTx(): {
   postTx: (txBody: TxBody, gas: number) => void
 } {
-  const { wallet, address, signArbitrary } = useWallet()
+  const { wallet, address } = useWallet()
 
   const postTx = useCallback((txBody: TxBody, gas: number) => {
     if (wallet == null) {
